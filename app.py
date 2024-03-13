@@ -7,5 +7,9 @@ app = Flask(__name__)
 def hello():
     return 'Hello, World!'
 
-if __name__ == '__main__':
-    app.run(debug=False, port=os.getenv("PORT", default=5000))
+if __name__ == "__main__":
+    app.run_server(
+        host='0.0.0.0',
+        port=os.getenv("PORT", default=5000),
+        debug=False,
+    )
