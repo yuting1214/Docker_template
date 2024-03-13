@@ -8,8 +8,7 @@ def hello():
     return 'Hello, World!'
 
 if __name__ == "__main__":
-    app.run_server(
-        host='0.0.0.0',
+    app.run(
         port=os.getenv("PORT", default=5000),
         debug=False,
     )
